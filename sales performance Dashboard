@@ -1,1 +1,27 @@
+CREATE TABLE Sales (
+    SaleID INT PRIMARY KEY,
+    SaleDate DATETIME,
+    StoreID INT,
+    ProductID INT,
+    Quantity INT,
+    TotalAmount DECIMAL(10, 2)
+);
+CREATE TABLE Stores (
+    StoreID INT PRIMARY KEY,
+    StoreName VARCHAR(100),
+    Region VARCHAR(50)
+);
+CREATE TABLE Products (
+    ProductID INT PRIMARY KEY,
+    ProductName VARCHAR(100),
+    Category VARCHAR(50),
+    Price DECIMAL(10, 2)
+);
+CREATE TABLE Targets (
+    TargetID INT PRIMARY KEY,
+    Month INT,
+    Year INT,
+    Region VARCHAR(50),
+    SalesTarget DECIMAL(10, 2)
+);
 
